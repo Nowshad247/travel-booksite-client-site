@@ -1,7 +1,9 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router';
 const AddNewService = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const history = useHistory();
     const onSubmit = data => {
         fetch('https://lit-bastion-18915.herokuapp.com/add-new-services', {
             method: 'POST',
@@ -10,7 +12,9 @@ const AddNewService = () => {
             },
             body: JSON.stringify(data)
         }).then(res => res.json())
-            .then(datas => console.log(datas))
+            .then(datas => {
+                history.push("/home");
+            })
     };
     return (
         <div className="container">
