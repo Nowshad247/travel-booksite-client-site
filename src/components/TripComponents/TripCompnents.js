@@ -4,7 +4,7 @@ import TripComponent from './TripComponent';
 const TripCompnents = () => {
     const [trips, settrip] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/trip')
+        fetch('https://lit-bastion-18915.herokuapp.com/trip')
             .then(res => res.json())
             .then(data => settrip(data))
     }, [])

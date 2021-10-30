@@ -7,7 +7,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
     const [clickid, setClickid] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/all-orders')
+        fetch('https://lit-bastion-18915.herokuapp.com/all-orders')
             .then(res => res.json())
             .then(data => {
                 setOrders(data)
@@ -15,7 +15,7 @@ const AllOrders = () => {
             })
     }, [])
     const handelCliack = (e) => {
-        const url = `http://localhost:5000/my-rder-list/${e}`;
+        const url = `https://lit-bastion-18915.herokuapp.com/my-rder-list/${e}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -35,7 +35,7 @@ const AllOrders = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = { clickid, status };
-        const url = `http://localhost:5000/all-orderss/${clickid}/${status}`;
+        const url = `https://lit-bastion-18915.herokuapp.com/all-orderss/${clickid}/${status}`;
         fetch(url, {
             method: 'PUT',
             headers: {

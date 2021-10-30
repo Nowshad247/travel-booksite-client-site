@@ -10,7 +10,7 @@ const Booking = (props) => {
     const { id } = useParams();
     const [packages, setPackages] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/package-details/${id}`;
+        const url = `https://lit-bastion-18915.herokuapp.com/package-details/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setPackages(data))

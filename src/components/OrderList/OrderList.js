@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 const OrderList = (props) => {
     const [orders, setOrders] = useState([]);
     const id = props.data;
-    const url = `http://localhost:5000/my-order-list/${id}`;
+    const url = `https://lit-bastion-18915.herokuapp.com/my-order-list/${id}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     const handelCliack = (e) => {
-        const url = `http://localhost:5000/my-rder-list/${e}`;
+        const url = `https://lit-bastion-18915.herokuapp.com/my-rder-list/${e}`;
         fetch(url, {
             method: 'DELETE'
         })

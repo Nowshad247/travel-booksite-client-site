@@ -10,7 +10,7 @@ const Order = (props) => {
     const { user } = useAuth();
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/order', {
+        axios.post('https://lit-bastion-18915.herokuapp.com/order', {
             packageid: id,
             userid: user.uid,
             fullname: data.name,
