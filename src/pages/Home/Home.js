@@ -66,7 +66,7 @@ const Home = () => {
                 <div className="row">
                     <CardGroup>
                         {
-                            packages.slice(0, 8).map(packag => <PackegsCard data={packag} key={packag._id}></PackegsCard>)
+                            packages.slice(0, 16).map(packag => <PackegsCard data={packag} key={packag._id}></PackegsCard>)
                         }
                     </CardGroup>
                 </div>

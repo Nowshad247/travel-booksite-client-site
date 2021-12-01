@@ -20,15 +20,17 @@ const AddNewService = () => {
         <div className="container">
             <div className="row">
                 <h1 className='text-center'>Add New Service</h1>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input  {...register("name")} placeholder="Package Title" />
-                    <input {...register("location")} placeholder='location ' />
-                    <input {...register("time")} placeholder="time" />
-                    <input {...register("price")} placeholder='prices' />
-                    <input {...register("description")} placeholder="Description" />
-                    <input {...register("image")} placeholder="image url" />
-                    <input type="submit" />
-                </form>
+                <div className="col-md-12 text-center">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input className="m-4"  {...register("name")} placeholder="Package Title" />
+                        <input className="m-4" {...register("location")} placeholder='location ' />
+                        <input className="m-4" {...register("time")} placeholder="time" />
+                        <input className="m-4" {...register("price")} placeholder='prices' />
+                        <textarea className="m-4" {...register("description")} placeholder="Description" />
+                        <input className="m-4" {...register("image")} placeholder="image url" />
+                        <input type="submit" />
+                    </form>
+                </div>
             </div>
         </div>
     );

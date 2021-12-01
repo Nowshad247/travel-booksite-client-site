@@ -15,8 +15,10 @@ const PackegsCard = (props) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">
+                    <small className="text-muted d-flex justify-content-between">
                         <Card.Link as={Link} to={`/booking/${data._id}`}>Book Now</Card.Link>
+                        <p>TK {data?.price}</p>
+
                     </small>
                 </Card.Footer>
             </Card>
